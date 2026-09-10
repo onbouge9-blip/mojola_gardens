@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tableau de bord — Mojola Gardens</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="images/logo.jpg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-body">
+
+<!-- LOGIN GATE -->
+<div class="admin-gate" id="adminGate">
+  <form class="gate-card" id="gateForm">
+    <img src="images/logo.jpg" alt="Logo Mojola Gardens">
+    <h2>Tableau de bord</h2>
+    <p>Espace réservé à l'équipe Mojola Gardens.</p>
+    <div class="field" style="text-align:left;margin:20px 0 6px;">
+      <label for="gatePass">Code d'accès</label>
+      <input type="password" id="gatePass" placeholder="••••••••" required autocomplete="off">
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Accéder au tableau de bord</button>
+    <p class="gate-error" id="gateError">Code incorrect, veuillez réessayer.</p>
+  </form>
+</div>
+
+<!-- DASHBOARD (hidden until unlocked) -->
+<div id="adminDashboard" style="display:none;">
+
+  <div class="container">
+    <div class="admin-header">
+      <div>
+        <h1>Tableau de bord Mojola Gardens</h1>
+        <p class="sub">Réservations, commandes et messages reçus depuis le site.</p>
+      </div>
+      <div style="display:flex;gap:12px;">
+        <a href="index.html" class="mini-btn">← Retour au site</a>
+        <button id="logoutBtn" class="mini-btn danger">Se déconnecter</button>
+      </div>
+    </div>
+
+    <div class="admin-note" id="dataSourceBanner">
+      Vérification de la connexion au backend…
+    </div>
+
+    <!-- KPIs -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="label">Réservations</div>
+        <div class="value" id="kpiReservations">0</div>
+        <div class="sub" id="kpiReservationsSub">+0 aujourd'hui</div>
+      </div>
+      <div class="kpi-card">
+        <div class="label">Commandes</div>
+        <div class="value" id="kpiOrders">0</div>
+        <div class="sub" id="kpiOrdersSub">+0 aujourd'hui</div>
+      </div>
+      <div class="kpi-card">
+        <div class="label">Chiffre d'affaires</div>
+        <div class="value" id="kpiRevenue">0 FCFA</div>
+        <div class="sub" id="kpiRevenueSub">estimé, commandes du site</div>
+      </div>
+      <div class="kpi-card">
+        <div class="label">Messages</div>
+        <div class="value" id="kpiMessages">0</div>
+        <div class="sub" id="kpiMessagesSub">+0 aujourd'hui</div>
+      </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="admin-tabs">
+      <button class="active" data-panel="panelReservations">Réservations</button>
+      <button data-panel="panelOrders">Commandes</button>
+      <button data-panel="panelMessages">Messages</button>
+      <button data-panel="panelStock">Stock</button>
+    </div>
+
+    <!-- RESERVATIONS -->
+    <div class="admin-panel active" id="panelReservations">
+      <div class="panel-card">
+        <div class="panel-head">
+          <h3>Demandes de réservation</h3>
+          <div class="panel-actions">
+            <button class="mini-btn" id="exportReservations">Exporter en CSV</button>
+            <button class="mini-btn danger" id="clearReservations">Vider</button>
+          </div>
+        </div>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead><tr>
+              <th>Reçue le</th><th>Nom</th><th>Téléphone</th><th>Convives</th><th>Date / Heure</th><th>Occasion</th><th>Message</th><th>Statut</th>
+            </tr></thead>
+            <tbody id="reservationsBody"></tbody>
+          </table>
+          <div class="admin-empty" id="reservationsEmpty">Aucune réservation reçue pour l'instant sur cet appareil.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ORDERS -->
+    <div class="admin-panel" id="panelOrders">
+      <div class="panel-card">
+        <div class="panel-head">
+          <h3>Produits les plus commandés</h3>
+        </div>
+        <div class="chart-bars" id="topProductsChart"></div>
+      </div>
+
+      <div class="panel-card">
+        <div class="panel-head">
+          <h3>Commandes reçues</h3>
+          <div class="panel-actions">
+            <button class="mini-btn" id="exportOrders">Exporter en CSV</button>
+            <button class="mini-btn danger" id="clearOrders">Vider</button>
+          </div>
+        </div>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead><tr>
+              <th>Reçue le</th><th>Nom</th><th>Téléphone</th><th>Produits</th><th>Mode</th><th>Total</th><th>Statut</th>
+            </tr></thead>
+            <tbody id="ordersBody"></tbody>
+          </table>
+          <div class="admin-empty" id="ordersEmpty">Aucune commande reçue pour l'instant sur cet appareil.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MESSAGES -->
+    <div class="admin-panel" id="panelMessages">
+      <div class="panel-card">
+        <div class="panel-head">
+          <h3>Messages du formulaire de contact</h3>
+          <div class="panel-actions">
+            <button class="mini-btn" id="exportMessages">Exporter en CSV</button>
+            <button class="mini-btn danger" id="clearMessages">Vider</button>
+          </div>
+        </div>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead><tr>
+              <th>Reçu le</th><th>Nom</th><th>Téléphone</th><th>Sujet</th><th>Message</th><th>Statut</th>
+            </tr></thead>
+            <tbody id="messagesBody"></tbody>
+          </table>
+          <div class="admin-empty" id="messagesEmpty">Aucun message reçu pour l'instant sur cet appareil.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STOCK -->
+    <div class="admin-panel" id="panelStock">
+      <div class="admin-note">
+        Désactivez un produit pour qu'il apparaisse comme <strong>« Indisponible »</strong> sur le Menu et la page Commander — les clients le verront grisé et ne pourront plus l'ajouter au panier. Réactivez-le dès qu'il est de nouveau disponible.
+      </div>
+      <div class="panel-card">
+        <div class="panel-head">
+          <h3>Disponibilité des produits</h3>
+        </div>
+        <div id="stockList" style="padding:16px 22px 26px;"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/menu-data.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

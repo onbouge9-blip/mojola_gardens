@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <defs>
+
+    <symbol id="samoussa" viewBox="0 0 48 48">
+      <path d="M8 38 L24 10 L40 38 Z" fill="none" stroke="#1F4D2C" stroke-width="2.4" stroke-linejoin="round"/>
+      <path d="M12 34 Q24 26 36 34" fill="none" stroke="#C9972E" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="nems" viewBox="0 0 48 48">
+      <rect x="8" y="16" width="32" height="16" rx="8" fill="none" stroke="#1F4D2C" stroke-width="2.4"/>
+      <path d="M15 16 L21 32 M24 16 L30 32 M33 16 L37 30" stroke="#C9972E" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="brochette" viewBox="0 0 48 48">
+      <line x1="6" y1="24" x2="42" y2="24" stroke="#1F4D2C" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="15" cy="24" r="5" fill="#B5392C"/>
+      <rect x="20.5" y="19" width="10" height="10" rx="2" fill="#C9972E"/>
+      <circle cx="36" cy="24" r="5" fill="#5FA13B"/>
+    </symbol>
+
+    <symbol id="wings" viewBox="0 0 48 48">
+      <path d="M18 8 C13 12 13 19 17 23 C11 25 9 32 13 38 C17 43 26 41 28 34 C35 32 39 23 32 16 C28 11 22 6 18 8 Z" fill="none" stroke="#1F4D2C" stroke-width="2.3" stroke-linejoin="round"/>
+      <circle cx="30" cy="15" r="2" fill="#C9972E"/>
+    </symbol>
+
+    <symbol id="salad-bowl" viewBox="0 0 48 48">
+      <path d="M8 22 Q24 40 40 22" fill="none" stroke="#1F4D2C" stroke-width="2.4" stroke-linecap="round"/>
+      <ellipse cx="24" cy="22" rx="16" ry="5" fill="none" stroke="#1F4D2C" stroke-width="2.4"/>
+      <circle cx="18" cy="19" r="2.3" fill="#B5392C"/>
+      <circle cx="26" cy="17" r="2.3" fill="#5FA13B"/>
+      <circle cx="31" cy="20" r="2" fill="#C9972E"/>
+    </symbol>
+
+    <symbol id="avocado" viewBox="0 0 48 48">
+      <path d="M24 8 C32 8 36 18 34 28 C32 38 16 38 14 28 C12 18 16 8 24 8 Z" fill="none" stroke="#5FA13B" stroke-width="2.4"/>
+      <circle cx="24" cy="26" r="6" fill="#C9972E"/>
+    </symbol>
+
+    <symbol id="wrap" viewBox="0 0 48 48">
+      <rect x="6" y="18" width="36" height="14" rx="7" fill="none" stroke="#1F4D2C" stroke-width="2.3" transform="rotate(-18 24 24)"/>
+      <line x1="14" y1="14" x2="18" y2="34" stroke="#C9972E" stroke-width="1.8" transform="rotate(-18 24 24)"/>
+      <line x1="30" y1="10" x2="34" y2="30" stroke="#5FA13B" stroke-width="1.8" transform="rotate(-18 24 24)"/>
+    </symbol>
+
+    <symbol id="burger" viewBox="0 0 48 48">
+      <path d="M8 20 Q24 8 40 20" fill="none" stroke="#C9972E" stroke-width="3" stroke-linecap="round"/>
+      <line x1="9" y1="24" x2="39" y2="24" stroke="#B5392C" stroke-width="3" stroke-linecap="round"/>
+      <line x1="9" y1="30" x2="39" y2="30" stroke="#5FA13B" stroke-width="3" stroke-linecap="round"/>
+      <path d="M8 36 Q24 42 40 36" fill="none" stroke="#C9972E" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="pizza-slice" viewBox="0 0 48 48">
+      <path d="M24 8 L42 40 L6 40 Z" fill="none" stroke="#C9972E" stroke-width="2.4" stroke-linejoin="round"/>
+      <path d="M10 38 Q24 30 38 38" stroke="#1F4D2C" stroke-width="1.6" fill="none"/>
+      <circle cx="22" cy="26" r="2.2" fill="#B5392C"/>
+      <circle cx="28" cy="20" r="2.2" fill="#B5392C"/>
+      <circle cx="18" cy="18" r="2" fill="#B5392C"/>
+    </symbol>
+
+    <symbol id="grilled" viewBox="0 0 48 48">
+      <path d="M18 6 C13 10 13 16 17 20 C11 22 9 28 13 34 C17 38 26 36 28 30 C34 28 38 20 32 14 C28 8 22 4 18 6 Z" fill="none" stroke="#1F4D2C" stroke-width="2.2" stroke-linejoin="round"/>
+      <path d="M10 40 Q14 34 10 30 Q18 32 16 40 Q22 34 20 42" stroke="#B5392C" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="fish" viewBox="0 0 48 48">
+      <path d="M6 24 C14 14 30 14 40 24 C30 34 14 34 6 24 Z" fill="none" stroke="#1F4D2C" stroke-width="2.4"/>
+      <path d="M40 24 L46 18 L46 30 Z" fill="#5FA13B" stroke="none"/>
+      <circle cx="14" cy="22" r="1.6" fill="#1F4D2C"/>
+    </symbol>
+
+    <symbol id="escargot" viewBox="0 0 48 48">
+      <path d="M24 34 a10 10 0 1 1 7-17" fill="none" stroke="#B5392C" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M24 34 a5 5 0 1 1 3.2-8.6" fill="none" stroke="#C9972E" stroke-width="2" stroke-linecap="round"/>
+      <path d="M14 34 H30" stroke="#1F4D2C" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="platter" viewBox="0 0 48 48">
+      <ellipse cx="24" cy="30" rx="18" ry="8" fill="none" stroke="#1F4D2C" stroke-width="2.2"/>
+      <line x1="12" y1="14" x2="20" y2="26" stroke="#B5392C" stroke-width="2" stroke-linecap="round"/>
+      <line x1="24" y1="10" x2="26" y2="26" stroke="#C9972E" stroke-width="2" stroke-linecap="round"/>
+      <line x1="36" y1="14" x2="30" y2="26" stroke="#5FA13B" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="rice-bowl" viewBox="0 0 48 48">
+      <path d="M10 24 Q24 36 38 24" fill="none" stroke="#1F4D2C" stroke-width="2.4" stroke-linecap="round"/>
+      <ellipse cx="24" cy="24" rx="14" ry="4.5" fill="none" stroke="#1F4D2C" stroke-width="2.4"/>
+      <path d="M18 10 Q18 16 15 18 M24 8 Q24 14 22 17 M30 10 Q30 16 27 18" stroke="#5FA13B" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="juice-glass" viewBox="0 0 48 48">
+      <path d="M16 10 L32 10 L29 40 L19 40 Z" fill="none" stroke="#1F4D2C" stroke-width="2.4" stroke-linejoin="round"/>
+      <line x1="17.5" y1="18" x2="30.5" y2="18" stroke="#5FA13B" stroke-width="2"/>
+      <line x1="32" y1="10" x2="38" y2="4" stroke="#C9972E" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="yogurt-bowl" viewBox="0 0 48 48">
+      <path d="M12 20 Q24 32 36 20" fill="none" stroke="#1F4D2C" stroke-width="2.4" stroke-linecap="round"/>
+      <ellipse cx="24" cy="20" rx="13" ry="4.5" fill="none" stroke="#1F4D2C" stroke-width="2.4"/>
+      <line x1="34" y1="14" x2="40" y2="8" stroke="#C9972E" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="40" cy="6" r="2" fill="#C9972E"/>
+    </symbol>
+
+    <symbol id="tea-cup" viewBox="0 0 48 48">
+      <path d="M10 20 H30 V28 Q30 36 20 36 Q10 36 10 28 Z" fill="none" stroke="#1F4D2C" stroke-width="2.4"/>
+      <path d="M30 22 Q38 22 38 28 Q38 33 30 32" fill="none" stroke="#1F4D2C" stroke-width="2"/>
+      <path d="M15 12 Q17 15 15 18 M22 10 Q24 13 22 16" stroke="#B5392C" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="mocktail-glass" viewBox="0 0 48 48">
+      <path d="M10 10 L38 10 L24 26 Z" fill="none" stroke="#1F4D2C" stroke-width="2.4" stroke-linejoin="round"/>
+      <line x1="24" y1="26" x2="24" y2="38" stroke="#1F4D2C" stroke-width="2.4"/>
+      <line x1="16" y1="38" x2="32" y2="38" stroke="#1F4D2C" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="30" cy="8" r="2" fill="#B5392C"/>
+    </symbol>
+
+    <symbol id="cocktail-glass" viewBox="0 0 48 48">
+      <path d="M8 10 L40 10 L24 28 Z" fill="none" stroke="#1F4D2C" stroke-width="2.4" stroke-linejoin="round"/>
+      <line x1="24" y1="28" x2="24" y2="40" stroke="#1F4D2C" stroke-width="2.4"/>
+      <line x1="15" y1="40" x2="33" y2="40" stroke="#1F4D2C" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="20" cy="16" r="1.8" fill="#5FA13B"/>
+    </symbol>
+
+    <symbol id="shooter-glass" viewBox="0 0 48 48">
+      <path d="M16 10 L32 10 L29 34 L19 34 Z" fill="none" stroke="#1F4D2C" stroke-width="2.4" stroke-linejoin="round"/>
+      <line x1="17" y1="18" x2="31" y2="18" stroke="#C9972E" stroke-width="2"/>
+    </symbol>
+
+    <symbol id="beer-bottle" viewBox="0 0 48 48">
+      <path d="M20 6 H28 V12 L31 16 V40 Q31 42 29 42 H19 Q17 42 17 40 V16 L20 12 Z" fill="none" stroke="#1F4D2C" stroke-width="2.2" stroke-linejoin="round"/>
+      <line x1="17" y1="26" x2="31" y2="26" stroke="#C9972E" stroke-width="2"/>
+    </symbol>
+
+    <symbol id="soda-bottle" viewBox="0 0 48 48">
+      <path d="M20 4 H28 V10 Q32 14 32 20 V40 Q32 42 30 42 H18 Q16 42 16 40 V20 Q16 14 20 10 Z" fill="none" stroke="#1F4D2C" stroke-width="2.2" stroke-linejoin="round"/>
+      <line x1="16" y1="28" x2="32" y2="28" stroke="#B5392C" stroke-width="2"/>
+    </symbol>
+
+    <symbol id="location-pin" viewBox="0 0 48 48">
+      <path d="M24 44 C24 44 12 29.5 12 20 C12 12.3 17.4 6 24 6 C30.6 6 36 12.3 36 20 C36 29.5 24 44 24 44 Z" fill="none" stroke="#1F4D2C" stroke-width="2.4" stroke-linejoin="round"/>
+      <circle cx="24" cy="20" r="6" fill="none" stroke="#B5392C" stroke-width="2.2"/>
+    </symbol>
+
+    <symbol id="clock" viewBox="0 0 48 48">
+      <circle cx="24" cy="24" r="17" fill="none" stroke="#1F4D2C" stroke-width="2.4"/>
+      <line x1="24" y1="24" x2="24" y2="13" stroke="#1F4D2C" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="24" y1="24" x2="32" y2="27" stroke="#C9972E" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="family" viewBox="0 0 48 48">
+      <circle cx="12" cy="13" r="4.6" fill="none" stroke="#1F4D2C" stroke-width="2.1"/>
+      <path d="M5 33 Q5 21.5 12 21.5 Q19 21.5 19 33" fill="none" stroke="#1F4D2C" stroke-width="2.1" stroke-linecap="round"/>
+      <circle cx="35" cy="13" r="4.6" fill="none" stroke="#1F4D2C" stroke-width="2.1"/>
+      <path d="M28 33 Q28 21.5 35 21.5 Q42 21.5 42 33" fill="none" stroke="#1F4D2C" stroke-width="2.1" stroke-linecap="round"/>
+      <circle cx="24" cy="24" r="3.4" fill="none" stroke="#B5392C" stroke-width="2"/>
+      <path d="M17.5 42 Q17.5 32.5 24 32.5 Q30.5 32.5 30.5 42" fill="none" stroke="#B5392C" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="camera" viewBox="0 0 48 48">
+      <rect x="6" y="15" width="36" height="23" rx="4" fill="none" stroke="#1F4D2C" stroke-width="2.3"/>
+      <path d="M16 15 L19 9.5 H29 L32 15" fill="none" stroke="#1F4D2C" stroke-width="2.3" stroke-linejoin="round"/>
+      <circle cx="24" cy="26.5" r="7" fill="none" stroke="#C9972E" stroke-width="2.1"/>
+      <circle cx="35" cy="20" r="1.6" fill="#B5392C"/>
+    </symbol>
+
+    <symbol id="phone-call" viewBox="0 0 48 48">
+      <path d="M12 8 H18 L21 16 L17 19 C19 25 23 29 29 31 L32 27 L40 30 V36 C40 38.2 38.2 40 36 40 C22 40 8 26 8 12 C8 9.8 9.8 8 12 8 Z" fill="none" stroke="#1F4D2C" stroke-width="2.2" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="cart" viewBox="0 0 48 48">
+      <path d="M6 8 H11 L16 30 H36 L42 14 H14" fill="none" stroke="#1F4D2C" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="19" cy="38" r="3" fill="none" stroke="#1F4D2C" stroke-width="2.1"/>
+      <circle cx="33" cy="38" r="3" fill="none" stroke="#1F4D2C" stroke-width="2.1"/>
+    </symbol>
+
+    <symbol id="scooter" viewBox="0 0 48 48">
+      <circle cx="11" cy="36" r="5" fill="none" stroke="#1F4D2C" stroke-width="2.1"/>
+      <circle cx="36" cy="36" r="5" fill="none" stroke="#1F4D2C" stroke-width="2.1"/>
+      <path d="M11 36 H23 L27 23 H33" fill="none" stroke="#1F4D2C" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M23 36 H30" fill="none" stroke="#1F4D2C" stroke-width="2.1" stroke-linecap="round"/>
+      <path d="M27 23 L31 15 H37" fill="none" stroke="#1F4D2C" stroke-width="2.1" stroke-linecap="round"/>
+      <rect x="5" y="25" width="9" height="9" rx="1.6" fill="none" stroke="#B5392C" stroke-width="2"/>
+      <circle cx="33" cy="13" r="2" fill="#C9972E"/>
+    </symbol>
+
+  </defs>
+</svg>

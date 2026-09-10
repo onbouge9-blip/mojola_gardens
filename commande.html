@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commander — Mojola Gardens Godomey</title>
+<meta name="description" content="Composez votre commande Mojola Gardens : choisissez vos plats et boissons, ajustez les quantités et envoyez votre commande directement sur WhatsApp.">
+<link rel="icon" href="images/logo.jpg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-row">
+    <a href="index.html" class="brand">
+      <img src="images/logo.jpg" alt="Logo Mojola Gardens">
+      <span class="brand-text"><strong>Mojola Gardens</strong><span>Une histoire de goût</span></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="menu.html">Menu</a>
+      <a href="commande.html" class="active">Commander</a>
+      <a href="reservation.html">Réserver</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+22901530786"><span><svg class="icon-inline" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 8 H18 L21 16 L17 19 C19 25 23 29 29 31 L32 27 L40 30 V36 C40 38.2 38.2 40 36 40 C22 40 8 26 8 12 C8 9.8 9.8 8 12 8 Z" fill="none" stroke="#2F5D3F" stroke-width="2.2" stroke-linejoin="round"/></svg></span> +229 01 53 07 86 74</a>
+      <a href="reservation.html" class="btn btn-primary">Réserver une table</a>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Accueil</a> / Commander</div>
+    <h1>Composez votre commande</h1>
+    <p>Choisissez vos plats et boissons, ajustez les quantités, puis envoyez votre commande sur WhatsApp — pour une livraison à Godomey, un retrait sur place ou pour accompagner votre réservation.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="currency-note reveal" style="margin-top:-24px;position:relative;z-index:5;">💰 Prix en Francs CFA (FCFA / XOF) · quantités modifiables avec + / −</div>
+</div>
+
+<div class="menu-toolbar">
+  <div class="container">
+    <div class="menu-tabs" id="menuTabs">
+      <a href="#mises-en-bouche">Mises en bouche</a>
+      <a href="#salades">Salades</a>
+      <a href="#wraps-burgers">Wraps & Burgers</a>
+      <a href="#pizzas">Pizzas</a>
+      <a href="#grillades">Grillades</a>
+      <a href="#plateaux-partage">Plateaux à partager</a>
+      <a href="#garnitures">Garnitures</a>
+      <a href="#jus">Jus</a>
+      <a href="#yaourts">Yaourts & Dègués</a>
+      <a href="#thes">Thés</a>
+      <a href="#mocktails">Mocktails</a>
+      <a href="#cocktails">Cocktails</a>
+      <a href="#shooters">Shooters</a>
+      <a href="#boissons">Boissons</a>
+    </div>
+  </div>
+</div>
+
+<section style="padding-top:36px;">
+  <div class="container order-layout">
+
+    <div class="order-main">
+
+      <!-- MISES EN BOUCHE -->
+      <div class="menu-category" id="mises-en-bouche">
+        <div class="menu-cat-head reveal"><h2><img class="cat-emoji-icon" src="images/gallery/samoussa.JPG" alt="Mises en bouche"> Mises en bouche / Small Chops</h2><span class="sub">Lots de 5</span></div>
+        <div class="order-grid reveal">
+          <div class="order-item" data-name="Samoussa (lot de 5)" data-price="2500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f95f.png" alt="">Samoussa <span class="chip">Lot de 5</span></h4><div class="oi-price">2 500 FCFA</div><div class="oi-desc">Vegee / Bœuf / Poisson / Poulet</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Nems (lot de 5)" data-price="2500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f365.png" alt="">Nems <span class="chip">Lot de 5</span></h4><div class="oi-price">2 500 FCFA</div><div class="oi-desc">Bœuf / Poulet</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Mini brochettes (lot de 5)" data-price="2500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f362.png" alt="">Mini brochettes <span class="chip">Lot de 5</span></h4><div class="oi-price">2 500 FCFA</div><div class="oi-desc">Poisson / Poulet / Bœuf / Gésier / Fromage Peulh / Tofu</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Chicken wings (500g)" data-price="2500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f357.png" alt="">Chicken wings <span class="chip">500g</span></h4><div class="oi-price">2 500 FCFA</div><div class="oi-desc">Ailes de poulet marinées</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SALADES -->
+      <div class="menu-category" id="salades">
+        <div class="menu-cat-head reveal"><h2><img class="cat-emoji-icon" src="images/icons/salad.png" alt="Salades"> Nos Salades</h2></div>
+        <div class="order-grid reveal">
+          <div class="order-item" data-name="Salade Composée Vegee" data-price="3500">
+            <div class="order-item-info"><h4 class="disposition"><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f957.png" alt=""> Salade Composée Vegee <img class="leaf" src="images/icons/leaf.png" alt="Végétarien"></h4><div class="oi-price">3 500 FCFA</div><div class="oi-desc">Laitue, menthe, basilic, tomate, avocat, fromage Peulh/tofu</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Salade Composée Spéciale" data-price="4500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f957.png" alt="">Salade Composée Spéciale </h4><div class="oi-price">4 500 FCFA</div><div class="oi-desc">+ 3x samoussas ou 3x nems au choix</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Salade d'avocat" data-price="3500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f951.png" alt="">Salade d'avocat</h4><div class="oi-price">3 500 FCFA</div><div class="oi-desc">Avocat, laitue, menthe, tomate, concombre, œuf</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Salade du Chef" data-price="2500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f957.png" alt="">Salade du Chef</h4><div class="oi-price">2 500 FCFA</div><div class="oi-desc">Laitue, pomme golden, raisins secs, fines herbes</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WRAPS & BURGERS -->
+      <div class="menu-category" id="wraps-burgers">
+        <div class="menu-cat-head reveal"><h2><img class="cat-emoji-icon" src="images/hero/hero-wrap.jpg" alt=""> Nos Wraps et Burgers</h2></div>
+        <div class="order-grid reveal">
+          <div class="order-item" data-name="Wrap Single" data-price="2000">
+            <div class="order-item-info"><h4 class="disposition"><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f32f.png" alt="">Wrap Single <img class="leaf" src="images/icons/leaf.png" alt="Végétarien"></h4><div class="oi-price">2 000 FCFA</div><div class="oi-desc">Vegee / Poulet / Poisson / Bœuf</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Wrap Vegee" data-price="3000">
+            <div class="order-item-info"><h4 class="disposition"><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f32f.png" alt="">Wrap Vegee <img class="leaf" src="images/icons/leaf.png" alt="Végétarien"></h4><div class="oi-price">3 000 FCFA</div><div class="oi-desc">Fromage Peulh, pickles, basilic thaï, salade, frites</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Wrap Poulet" data-price="3000">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f32f.png" alt="">Wrap Poulet</h4><div class="oi-price">3 000 FCFA</div><div class="oi-desc">Filet de poulet, sauce samouraï, salade, frites</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Wrap de Bœuf" data-price="3000">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f32f.png" alt="">Wrap de Bœuf</h4><div class="oi-price">3 000 FCFA</div><div class="oi-desc">Boulettes de bœuf, sauce samouraï</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Wrap de Poisson" data-price="3000">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f32f.png" alt="">Wrap de Poisson</h4><div class="oi-price">3 000 FCFA</div><div class="oi-desc">Boulettes de poisson, salade, frites</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Burger Single" data-price="2000">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f354.png" alt="">Burger Single</h4><div class="oi-price">2 000 FCFA</div><div class="oi-desc">Burger au choix, sans frites</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Classic Burger" data-price="3000">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f354.png" alt="">Classic Burger</h4><div class="oi-price">3 000 FCFA</div><div class="oi-desc">Bœuf 150g, fromage, sauce samouraï</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Vegee Burger" data-price="3000">
+            <div class="order-item-info"><h4 class="disposition"><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f354.png" alt="">Vegee Burger <img class="leaf" src="images/icons/leaf.png" alt="Végétarien"></h4><div class="oi-price">3 000 FCFA</div><div class="oi-desc">Fromage Peulh 150g, pistou</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PIZZAS -->
+      <div class="menu-category" id="pizzas">
+        <div class="menu-cat-head reveal"><h2><img class="cat-emoji-icon" src="images/hero/hero-pizza.jpg" alt=""> Nos Pizzas</h2></div>
+        <div class="order-grid reveal">
+          <div class="order-item" data-name="Pizza Margarita" data-price="4500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f355.png" alt="">Pizza Margarita</h4><div class="oi-price">4 500 FCFA</div><div class="oi-desc">Basilic, olive, mozzarella, gruyère</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Pizza Végétarienne" data-price="5500">
+            <div class="order-item-info"><h4 class="disposition"><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f355.png" alt="">Pizza Végétarienne <img class="leaf" src="images/icons/leaf.png" alt="Végétarien"></h4><div class="oi-price">5 500 FCFA</div><div class="oi-desc">Basilic, légumes sautés, mozzarella</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Pizza Caprese Peulh" data-price="5500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f355.png" alt="">Pizza Caprese Peulh</h4><div class="oi-price">5 500 FCFA</div><div class="oi-desc">Tomate fraîche, pistou, fromage Peulh</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Pizza Regina" data-price="5500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f355.png" alt="">Pizza Regina</h4><div class="oi-price">5 500 FCFA</div><div class="oi-desc">Jambon de dinde, champignons, olive</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Pizza Suprême Poulet Mexicaine" data-price="5500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f355.png" alt="">Suprême Poulet Mexicaine</h4><div class="oi-price">5 500 FCFA</div><div class="oi-desc">Poulet fines herbes, maïs, poivron</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Pizza Hawaïenne" data-price="5500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f355.png" alt="">Pizza Hawaïenne</h4><div class="oi-price">5 500 FCFA</div><div class="oi-desc">Jambon de dinde, ananas, poivron</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Pizza Buffalo" data-price="5500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f355.png" alt="">Pizza Buffalo</h4><div class="oi-price">5 500 FCFA</div><div class="oi-desc">Viande hachée, champignons, poivron</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Pizza Périgourdine" data-price="5500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f355.png" alt="">Pizza Périgourdine</h4><div class="oi-price">5 500 FCFA</div><div class="oi-desc">Gésiers confits, pomme de terre sautée</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Pizza 4 Fromages" data-price="7000">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f355.png" alt="">Pizza 4 Fromages</h4><div class="oi-price">7 000 FCFA</div><div class="oi-desc">Mozzarella, gruyère, cheddar, brie</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Pizza Gambas" data-price="8000">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f355.png" alt="">Pizza Gambas</h4><div class="oi-price">8 000 FCFA</div><div class="oi-desc">Poivron, crème fraîche, gambas</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+        </div>
+        <div class="menu-note reveal" style="margin-top:10px;"><svg class="icon-inline" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 8 L42 40 L6 40 Z" fill="none" stroke="#D9A441" stroke-width="2.4" stroke-linejoin="round"/>
+      <path d="M10 38 Q24 30 38 38" stroke="#2F5D3F" stroke-width="1.6" fill="none"/>
+      <circle cx="22" cy="26" r="2.2" fill="#E2703A"/>
+      <circle cx="28" cy="20" r="2.2" fill="#E2703A"/>
+      <circle cx="18" cy="18" r="2" fill="#E2703A"/></svg> <strong>Pizza Composée</strong> (pizza au choix + supplément protéine dès 1 000 FCFA) : précisez-la dans le champ « Notes » ci-contre.</div>
+      </div>
+
+      <!-- GRILLADES -->
+      <div class="menu-category" id="grillades">
+        <div class="menu-cat-head reveal"><h2><img class="cat-emoji-icon" src="images/icons/bbq.png" alt="Grillades"> Nos Grillades</h2><span class="sub">Choukouya au feu de bois</span></div>
+        <div class="order-grid reveal">
+          <div class="order-item" data-name="Choukouya de poulet" data-price="2500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f356.png" alt="">Choukouya de poulet</h4><div class="oi-price">2 500 FCFA</div><div class="oi-desc">Demi poulet, sauce spéciale oignon (sans garniture)</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Choukouya de Pintade" data-price="3500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f356.png" alt="">Choukouya de Pintade</h4><div class="oi-price">3 500 FCFA</div><div class="oi-desc">Demi pintade, sauce spéciale oignon (sans garniture)</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Choukouya de Lapin" data-price="3500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f356.png" alt="">Choukouya de Lapin</h4><div class="oi-price">3 500 FCFA</div><div class="oi-desc">Demi lapin, sauce spéciale oignon (sans garniture)</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Choukouya de Cabri" data-price="2500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f356.png" alt="">Choukouya de Cabri</h4><div class="oi-price">2 500 FCFA</div><div class="oi-desc">Fricassée de cabri 350g (sans garniture)</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Choukouya d'Escargot" data-price="3500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f356.png" alt="">Choukouya d'Escargot</h4><div class="oi-price">3 500 FCFA</div><div class="oi-desc">Escargot braisé (sans garniture)</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Grande brochette" data-price="1000">
+            <div class="order-item-info"><h4><img class="brochette" src="images/gallery/brochette.jpg" alt="">Grande brochette</h4><div class="oi-price">1 000 FCFA</div><div class="oi-desc">Au choix : poulet, bœuf ou gésier</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Braisé au choix (Bar/Tilapia/Sole/Poulet/Mouton)" data-price="4500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f356.png" alt="">Braisé au choix <span class="chip">Dès 4 500f</span></h4><div class="oi-price">4 500 FCFA</div><div class="oi-desc">Bar, tilapia, sole, poulet bicyclette ou mouton — 1 garniture incluse. Précisez votre choix en note.</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Braisé au choix (Pintade/Lapin 1/2)" data-price="5500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f356.png" alt="">Braisé au choix <span class="chip">Dès 5 500f</span></h4><div class="oi-price">5 500 FCFA</div><div class="oi-desc">Pintade ou lapin braisé (1/2) — 1 garniture incluse. Précisez votre choix en note.</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PLATEAUX PARTAGE -->
+      <div class="menu-category" id="plateaux-partage">
+        <div class="menu-cat-head reveal"><h2><svg class="icon-inline" viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="30" rx="18" ry="8" fill="none" stroke="#2F5D3F" stroke-width="2.2"/>
+      <line x1="12" y1="14" x2="20" y2="26" stroke="#E2703A" stroke-width="2" stroke-linecap="round"/>
+      <line x1="24" y1="10" x2="26" y2="26" stroke="#D9A441" stroke-width="2" stroke-linecap="round"/>
+      <line x1="36" y1="14" x2="30" y2="26" stroke="#77965A" stroke-width="2" stroke-linecap="round"/></svg> Nos Plateaux Partage</h2></div>
+        <div class="order-grid reveal">
+          <div class="order-item" data-name="Brochetti" data-price="8000">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f958.png" alt="">Brochetti</h4><div class="oi-price">8 000 FCFA</div><div class="oi-desc">4 mini brochettes, 4 samoussas, 4 nems, wings 0,5kg</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Mabawa" data-price="11000">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f958.png" alt="">Mabawa</h4><div class="oi-price">11 000 FCFA</div><div class="oi-desc">Wings 1kg, 6 mini brochettes, 4 nems, 4 samoussas</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Partage poulet choukouya" data-price="13500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f356.png" alt="">Partage poulet choukouya</h4><div class="oi-price">13 500 FCFA</div><div class="oi-desc">Poulet entier, samoussas, nems, brochettes, salade, 2 garnitures</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Partage cabri choukouya" data-price="13500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f356.png" alt="">Partage cabri choukouya</h4><div class="oi-price">13 500 FCFA</div><div class="oi-desc">Cabri (2 portions), samoussas, nems, brochettes, salade, 2 garnitures</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Partage pintade choukouya" data-price="15500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f356.png" alt="">Partage pintade choukouya</h4><div class="oi-price">15 500 FCFA</div><div class="oi-desc">Pintade entière, nems, brochettes, salade, 2 garnitures</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Partage lapin choukouya" data-price="15500">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f356.png" alt="">Partage lapin choukouya</h4><div class="oi-price">15 500 FCFA</div><div class="oi-desc">Lapin entier, samoussas, nems, brochettes, salade, 2 garnitures</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Partage Mojola Classique" data-price="14000">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f958.png" alt="">Partage Mojola Classique</h4><div class="oi-price">14 000 FCFA</div><div class="oi-desc">Demi poulet bicyclette braisé, choukouya cabri, salade, 2 garnitures</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Partage Mojola Spécial" data-price="17000">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f958.png" alt="">Partage Mojola Spécial</h4><div class="oi-price">17 000 FCFA</div><div class="oi-desc">Demi pintade/lapin/mouton braisé, choukouya, salade, 3 garnitures</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GARNITURES -->
+      <div class="menu-category" id="garnitures">
+        <div class="menu-cat-head reveal"><h2>🍚 Nos Garnitures</h2><span class="sub">1 000 FCFA / portion</span></div>
+        <div class="order-grid reveal">
+          <div class="order-item" data-name="Garniture — Riz coco curcuma / Riz blanc" data-price="1000">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f35a.png" alt="">Riz coco curcuma / Riz blanc</h4><div class="oi-price">1 000 FCFA</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Garniture — Amiwo/Bomiwo/Piron" data-price="1000">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f35a.png" alt="">Amiwo / Bomiwo / Piron</h4><div class="oi-price">1 000 FCFA</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Garniture — Attiéké/Alloco/Frite" data-price="1000">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f35a.png" alt="">Attiéké / Alloco / Frite</h4><div class="oi-price">1 000 FCFA</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Garniture — Pomme de terre sautée" data-price="1000">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f35a.png" alt="">Pomme de terre sautée</h4><div class="oi-price">1 000 FCFA</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+          <div class="order-item" data-name="Garniture — Légumes sautées" data-price="1000">
+            <div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f35a.png" alt="">Légumes sautées</h4><div class="oi-price">1 000 FCFA</div></div>
+            <div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JUS -->
+      <div class="menu-category" id="jus">
+        <div class="menu-cat-head reveal"><h2><img class="jugos" src="images/icons/cocktail.png" alt=""> Nos Jugos (Jus)</h2></div>
+        <div class="order-grid reveal">
+          <div class="order-item" data-name="Jus Orange" data-price="1000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f964.png" alt="">Orange</h4><div class="oi-price">1 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Jus Ananas" data-price="1000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f964.png" alt="">Ananas</h4><div class="oi-price">1 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Pastèque pressée" data-price="1500"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f964.png" alt="">Pastèque pressée</h4><div class="oi-price">1 500 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Jus Gingembre" data-price="1000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f964.png" alt="">Gingembre</h4><div class="oi-price">1 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Bissap" data-price="1000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f964.png" alt="">Bissap</h4><div class="oi-price">1 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Antioxydant" data-price="1500"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f964.png" alt="">Antioxydant</h4><div class="oi-price">1 500 FCFA</div><div class="oi-desc">Orange, citron, miel, carotte, épinards, curcuma</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Antigripal" data-price="1500"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f964.png" alt="">Antigripal</h4><div class="oi-price">1 500 FCFA</div><div class="oi-desc">Orange, eau de coco, ananas, gingembre</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Verdé" data-price="1500"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f964.png" alt="">Verdé</h4><div class="oi-price">1 500 FCFA</div><div class="oi-desc">Orange, céléris, ananas, persil</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Menta" data-price="1500"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f964.png" alt="">Menta</h4><div class="oi-price">1 500 FCFA</div><div class="oi-desc">Orange, ananas, menthe</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Papaya" data-price="1500"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f964.png" alt="">Papaya</h4><div class="oi-price">1 500 FCFA</div><div class="oi-desc">Papaye, ananas, citron, basilic</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Banana" data-price="1500"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f964.png" alt="">Banana</h4><div class="oi-price">1 500 FCFA</div><div class="oi-desc">Banane, lait, flocon d'avoine, chocolat, miel</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Mango" data-price="1500"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f964.png" alt="">Mango</h4><div class="oi-price">1 500 FCFA</div><div class="oi-desc">Mangue, orange, menthe</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Pina colada (jus)" data-price="1500"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f378.png" alt="">Pina colada</h4><div class="oi-price">1 500 FCFA</div><div class="oi-desc">Ananas, lait de coco</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Manzana" data-price="2000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f964.png" alt="">Manzana</h4><div class="oi-price">2 000 FCFA</div><div class="oi-desc">Pomme, banane, lait, cannelle</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Fresa" data-price="2000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f964.png" alt="">Fresa</h4><div class="oi-price">2 000 FCFA</div><div class="oi-desc">Fraise, lait, flocon d'avoine, miel</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+        </div>
+      </div>
+
+      <!-- YAOURTS -->
+      <div class="menu-category" id="yaourts">
+        <div class="menu-cat-head reveal"><h2><img class="cat-emoji-icon" src="images/degue.JPG" alt=""> Nos Yaourts & Dègués</h2></div>
+        <div class="order-grid reveal">
+          <div class="order-item" data-name="Yaourt nature" data-price="800"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f963.png" alt="">Yaourt nature</h4><div class="oi-price">800 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Yaourt gourmand choco coco" data-price="1500"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f963.png" alt="">Yaourt gourmand choco coco</h4><div class="oi-price">1 500 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Dègué tradi mil" data-price="1000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f963.png" alt="">Dègué tradi mil</h4><div class="oi-price">1 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Dègué tradi blé" data-price="1000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f963.png" alt="">Dègué tradi blé</h4><div class="oi-price">1 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Dègué mil/blé vanille" data-price="2000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f963.png" alt="">Dègué mil/blé vanille</h4><div class="oi-price">2 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Dègué mil/blé chocolat" data-price="2000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f963.png" alt="">Dègué mil/blé chocolat</h4><div class="oi-price">2 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Dègué mil/blé Caramel" data-price="2000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f963.png" alt="">Dègué mil/blé Caramel</h4><div class="oi-price">2 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Milk shake" data-price="2000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f963.png" alt="">Milk shake</h4><div class="oi-price">2 000 FCFA</div><div class="oi-desc">Vanille, banane ou choco-banane ou fraise</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+        </div>
+      </div>
+
+      <!-- THES -->
+      <div class="menu-category" id="thes">
+        <div class="menu-cat-head reveal"><h2><img class="cat-emoji-icon" src="images/icons/the-mojoto.png" alt=""> Nos Thés</h2></div>
+        <div class="order-grid reveal">
+          <div class="order-item" data-name="Thé glacé" data-price="1500"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f375.png" alt="">Thé glacé</h4><div class="oi-price">1 500 FCFA</div><div class="oi-desc">Pêche, citron ou gingembre</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Thé mojito" data-price="1500"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f375.png" alt="">Thé mojito</h4><div class="oi-price">1 500 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Thé citronnelle au miel" data-price="1500"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f375.png" alt="">Thé citronnelle au miel</h4><div class="oi-price">1 500 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+        </div>
+      </div>
+
+      <!-- MOCKTAILS -->
+      <div class="menu-category" id="mocktails">
+        <div class="menu-cat-head reveal"><h2><img class="cat-emoji-icon" src="images/icons/cocktail.png" alt="Mocktails"> Nos Mocktails</h2><span class="sub">Sans alcool</span></div>
+        <div class="order-grid reveal">
+          <div class="order-item" data-name="Bora bora" data-price="2000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f379.png" alt="">Bora bora</h4><div class="oi-price">2 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Virgin mojola" data-price="2000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f379.png" alt="">Virgin mojola</h4><div class="oi-price">2 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Virgin mojito" data-price="2000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f379.png" alt="">Virgin mojito</h4><div class="oi-price">2 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Rollier" data-price="2000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f379.png" alt="">Rollier</h4><div class="oi-price">2 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Abricot frappé" data-price="2000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f379.png" alt="">Abricot frappé</h4><div class="oi-price">2 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+        </div>
+      </div>
+
+      <!-- COCKTAILS -->
+      <div class="menu-category" id="cocktails">
+        <div class="menu-cat-head reveal"><h2><img class="cat-emoji-icon" src="images/icons/cocktail-allcool.png" alt="Cocktails"> Nos Cocktails — Art's Corner</h2></div>
+        <div class="order-grid reveal">
+          <div class="order-item" data-name="Sangria" data-price="3000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f378.png" alt="">Sangria</h4><div class="oi-price">3 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Planteur" data-price="3000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f378.png" alt="">Planteur</h4><div class="oi-price">3 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Mojito classic" data-price="3000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f378.png" alt="">Mojito classic</h4><div class="oi-price">3 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Pina colada (cocktail)" data-price="3000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f378.png" alt="">Pina colada</h4><div class="oi-price">3 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Blue lagoon" data-price="3000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f378.png" alt="">Blue lagoon</h4><div class="oi-price">3 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Blue hawaï" data-price="3000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f378.png" alt="">Blue hawaï</h4><div class="oi-price">3 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Caïpiroska" data-price="3000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f378.png" alt="">Caïpiroska</h4><div class="oi-price">3 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Mojola hot" data-price="3000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f378.png" alt="">Mojola hot</h4><div class="oi-price">3 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Paradise" data-price="3000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f378.png" alt="">Paradise</h4><div class="oi-price">3 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Tequila sunrise" data-price="3000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f378.png" alt="">Tequila sunrise</h4><div class="oi-price">3 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Margarita" data-price="3000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f378.png" alt="">Margarita</h4><div class="oi-price">3 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Cupa libre" data-price="3000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f378.png" alt="">Cupa libre</h4><div class="oi-price">3 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Bring me" data-price="3000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f378.png" alt="">Bring me</h4><div class="oi-price">3 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Americano" data-price="3000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f378.png" alt="">Americano</h4><div class="oi-price">3 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Negroni" data-price="3000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f378.png" alt="">Negroni</h4><div class="oi-price">3 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+        </div>
+      </div>
+
+      <!-- SHOOTERS -->
+      <div class="menu-category" id="shooters">
+        <div class="menu-cat-head reveal"><h2><img class="cat-emoji-icon" src="images/icons/shooter.JPG" alt=""> Nos Shooters</h2></div>
+        <div class="order-grid reveal">
+          <div class="order-item" data-name="Shooter mix barre de 3" data-price="3000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f943.png" alt="">Shooter mix barre de 3</h4><div class="oi-price">3 000 FCFA</div><div class="oi-desc">Sweet · medium · hot</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Shooter mix barre de 7" data-price="6000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f943.png" alt="">Shooter mix barre de 7</h4><div class="oi-price">6 000 FCFA</div><div class="oi-desc">Sweet · medium · hot</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Shot sodabi arrangé barre de 2" data-price="1500"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f943.png" alt="">Shot sodabi arrangé barre de 2</h4><div class="oi-price">1 500 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+        </div>
+      </div>
+
+      <!-- BOISSONS -->
+      <div class="menu-category" id="boissons">
+        <div class="menu-cat-head reveal"><h2><svg class="icon-inline" viewBox="0 0 48 48" aria-hidden="true"><path d="M20 4 H28 V10 Q32 14 32 20 V40 Q32 42 30 42 H18 Q16 42 16 40 V20 Q16 14 20 10 Z" fill="none" stroke="#2F5D3F" stroke-width="2.2" stroke-linejoin="round"/>
+      <line x1="16" y1="28" x2="32" y2="28" stroke="#E2703A" stroke-width="2"/></svg> Nos Boissons</h2><span class="sub">Bières, sodas & eau</span></div>
+        <div class="order-grid reveal">
+          <div class="order-item" data-name="Awoyo 50cl" data-price="1200"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f9c3.png" alt="">Awoyo <span class="chip">50cl</span></h4><div class="oi-price">1 200 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Beaufort 33cl" data-price="700"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f37a.png" alt="">Beaufort <span class="chip">33cl</span></h4><div class="oi-price">700 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Béninoise 33cl" data-price="700"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f37a.png" alt="">Béninoise <span class="chip">33cl</span></h4><div class="oi-price">700 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Castel 50cl" data-price="900"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f37a.png" alt="">Castel <span class="chip">50cl</span></h4><div class="oi-price">900 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Desparado 33cl" data-price="1500"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f37a.png" alt="">Desparado <span class="chip">33cl</span></h4><div class="oi-price">1 500 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Doppel 33cl" data-price="700"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f37a.png" alt="">Doppel <span class="chip">33cl</span></h4><div class="oi-price">700 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Doppel 50cl" data-price="900"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f37a.png" alt="">Doppel <span class="chip">50cl</span></h4><div class="oi-price">900 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Eku 33cl" data-price="700"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f37a.png" alt="">Eku <span class="chip">33cl</span></h4><div class="oi-price">700 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Flag 50cl" data-price="900"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f37a.png" alt="">Flag <span class="chip">50cl</span></h4><div class="oi-price">900 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Guiness 33cl" data-price="1000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f37a.png" alt="">Guiness <span class="chip">33cl</span></h4><div class="oi-price">1 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Heinekein" data-price="1000"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f37a.png" alt="">Heinekein</h4><div class="oi-price">1 000 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Pils 33cl" data-price="700"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f37a.png" alt="">Pils <span class="chip">33cl</span></h4><div class="oi-price">700 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Racine booster 50cl" data-price="1200"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f37a.png" alt="">Racine booster <span class="chip">50cl</span></h4><div class="oi-price">1 200 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Téquila booster 33cl" data-price="700"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f9c3.png" alt="">Téquila booster <span class="chip">33cl</span></h4><div class="oi-price">700 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="XXL 33cl" data-price="700"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f37a.png" alt="">XXL <span class="chip">33cl</span></h4><div class="oi-price">700 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Coca-cola 33cl" data-price="700"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f9c3.png" alt="">Coca-cola <span class="chip">33cl</span></h4><div class="oi-price">700 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Cocktail de fruits 33cl" data-price="700"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f9c3.png" alt="">Cocktail de fruits <span class="chip">33cl</span></h4><div class="oi-price">700 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Moka 33cl" data-price="700"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f9c3.png" alt="">Moka <span class="chip">33cl</span></h4><div class="oi-price">700 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Pamplemousse 33cl" data-price="700"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f9c3.png" alt="">Pamplemousse <span class="chip">33cl</span></h4><div class="oi-price">700 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Panaché 33cl" data-price="700"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f9c3.png" alt="">Panaché <span class="chip">33cl</span></h4><div class="oi-price">700 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Sprite 33cl" data-price="700"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f9c3.png" alt="">Sprite <span class="chip">33cl</span></h4><div class="oi-price">700 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Contesse 1L" data-price="800"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f9c3.png" alt="">Contesse <span class="chip">1L</span></h4><div class="oi-price">800 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Fifa 1,5L" data-price="600"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f9c3.png" alt="">Fifa <span class="chip">1,5L</span></h4><div class="oi-price">600 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+          <div class="order-item" data-name="Kwabo 1L" data-price="800"><div class="order-item-info"><h4><img class="oi-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/1f9c3.png" alt="">Kwabo <span class="chip">1L</span></h4><div class="oi-price">800 FCFA</div></div><div class="order-item-side"><span class="line-total"></span><div class="qty-control"><button type="button" class="qty-minus">−</button><input type="number" class="qty-input" value="0" min="0" max="20"><button type="button" class="qty-plus">+</button></div></div></div>
+        </div>
+      </div>
+
+    </div><!-- /order-main -->
+
+    <!-- STICKY CART -->
+    <aside class="order-cart">
+      <div class="cart-box">
+        <h3><svg class="icon-inline" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 8 H11 L16 30 H36 L42 14 H14" fill="none" stroke="#2F5D3F" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="19" cy="38" r="3" fill="none" stroke="#2F5D3F" stroke-width="2.1"/>
+      <circle cx="33" cy="38" r="3" fill="none" stroke="#2F5D3F" stroke-width="2.1"/></svg> Ma commande <span id="cartCount">0</span></h3>
+        <p class="cart-sub">Ajoutez des produits ci-contre, puis complétez vos coordonnées.</p>
+
+        <div id="cartEmpty" class="cart-empty">Votre panier est vide pour l'instant.</div>
+        <div id="cartList" class="cart-list"></div>
+
+        <div class="cart-total-row">
+          <span class="label">Total</span>
+          <span class="amount" id="cartTotal">0 FCFA</span>
+        </div>
+        <button type="button" id="cartClear" class="cart-clear">Vider le panier</button>
+
+        <div class="cart-fields">
+          <div>
+            <label for="o-nom">Nom complet *</label>
+            <input type="text" id="o-nom" placeholder="Votre nom">
+          </div>
+          <div>
+            <label for="o-tel">Téléphone / WhatsApp *</label>
+            <input type="tel" id="o-tel" placeholder="+229 00 00 00 00">
+          </div>
+          <div>
+            <label for="o-mode">Mode</label>
+            <select id="o-mode">
+              <option value="Livraison à Godomey">Livraison à Godomey</option>
+              <option value="À emporter">À emporter</option>
+              <option value="Sur place (avec réservation)">Sur place (avec réservation)</option>
+            </select>
+          </div>
+          <div>
+            <label for="o-date">Date souhaitée</label>
+            <input type="date" id="o-date">
+          </div>
+          <div>
+            <label for="o-heure">Heure souhaitée</label>
+            <input type="time" id="o-heure">
+          </div>
+          <div>
+            <label for="o-adresse">Adresse de livraison</label>
+            <input type="text" id="o-adresse" placeholder="Quartier, repère à Godomey...">
+          </div>
+          <div>
+            <label for="o-notes">Notes (choix précis, allergies...)</label>
+            <textarea id="o-notes" placeholder="Ex : braisé au choix = tilapia, garniture frites..."></textarea>
+          </div>
+        </div>
+
+        <button type="button" id="waSubmit" class="wa-submit"><img src="images/icons/whatsapp.png" alt="WhatsApp"> Envoyer ma commande sur WhatsApp</button>
+        <div id="orderFeedback" role="status" style="display:none;margin-top:12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:#fff;padding:10px 12px;border-radius:10px;font-size:.82rem;"></div>
+        <p class="cart-note">En envoyant, WhatsApp s'ouvre avec votre commande pré-remplie. Notre équipe vous confirme le prix final et le délai. Vous pouvez aussi appeler directement le <a href="tel:+22901530786" style="color:var(--gold-light);font-weight:700;">01 53 07 86 74</a>.</p>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="images/logo.jpg" alt="Logo Mojola Gardens"><strong>Mojola Gardens</strong></div>
+        <p style="font-size:.9rem;">Restaurant Bar Art's Corner à Godomey — cuisine saine & sans cube, une histoire de goût.</p>
+        <div class="social-row">
+          <a href="https://instagram.com/mojolagardens" aria-label="Instagram" target="_blank" rel="noopener"><svg class="icon-inline" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="15" width="36" height="23" rx="4" fill="none" stroke="#2F5D3F" stroke-width="2.3"/>
+      <path d="M16 15 L19 9.5 H29 L32 15" fill="none" stroke="#2F5D3F" stroke-width="2.3" stroke-linejoin="round"/>
+      <circle cx="24" cy="26.5" r="7" fill="none" stroke="#D9A441" stroke-width="2.1"/>
+      <circle cx="35" cy="20" r="1.6" fill="#E2703A"/></svg></a>
+          <a href="https://facebook.com/mojolagardens" aria-label="Facebook" target="_blank" rel="noopener"><img src="images/icons/facebook.png" alt="Facebook"></a>
+          <a href="https://wa.me/22953078674" aria-label="WhatsApp" target="_blank" rel="noopener"><img src="images/icons/whatsapp.png" alt="WhatsApp"></a>
+        </div>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <a href="index.html">Accueil</a>
+        <a href="apropos.html">À propos</a>
+        <a href="menu.html">Menu</a>
+        <a href="commande.html">Commander</a>
+        <a href="reservation.html">Réserver</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h5>Nos univers</h5>
+        <a href="menu.html#salades">Salades & Bowls</a>
+        <a href="menu.html#pizzas">Pizzas</a>
+        <a href="menu.html#grillades">Grillades & Choukouya</a>
+        <a href="menu.html#plateaux-partage">Plateaux à partager</a>
+        <a href="menu.html#cocktails">Bar & Cocktails</a>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <a href="tel:+22901530786">+229 01 53 07 86 74</a>
+        <a href="tel:+22953078674">+229 53 07 86 74</a>
+        <a href="https://maps.app.goo.gl/xRem4L5AE8pWV8Yw7" target="_blank" rel="noopener">Godomey, Abomey-Calavi, Bénin</a>
+        <a href="#">Livraison dès 500 FCFA</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Mojola Gardens. Tous droits réservés.</span>
+      <span> Mojola Gardens · Godomey, Bénin</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/22953078674" class="wa-float" aria-label="Contacter sur WhatsApp" target="_blank" rel="noopener"><img src="images/icons/whatsapp.png" alt="WhatsApp"></a>
+
+<script src="js/script.js"></script>
+</body>
+</html>
