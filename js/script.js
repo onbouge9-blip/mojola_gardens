@@ -4,8 +4,8 @@
    Remplacez REPLACE_WITH_YOUR_BACKEND_URL par l'URL de votre backend une fois
    déployé (voir mojola-backend/README.md). Tant que cette valeur n'est pas
    changée, le site reste en mode 100% local (comportement précédent). */
-const MOJOLA_API_BASE = 'REPLACE_WITH_YOUR_BACKEND_URL/api';
-const MOJOLA_API_ENABLED = !MOJOLA_API_BASE.includes('REPLACE_WITH_YOUR_BACKEND_URL');
+const MOJOLA_API_BASE = 'http://mojola-gardens.netlify.app';
+const MOJOLA_API_ENABLED = !MOJOLA_API_BASE.includes('http://mojola-gardens.netlify.app');
 
 async function mojolaApiPost(endpoint, payload) {
   if (!MOJOLA_API_ENABLED) return { ok: false, offline: true };
