@@ -2,7 +2,8 @@
 // Utilise l'API backend (voir mojola-backend/) quand MOJOLA_API_BASE est configuré
 // et joignable. Sinon, repli automatique sur les données locales (localStorage)
 // enregistrées par script.js — visibles uniquement sur cet appareil.
-
+const MOJOLA_API_BASE = 'http://mojola-gardens.netlify.app';
+const MOJOLA_API_ENABLED = !MOJOLA_API_BASE.includes('http://mojola-gardens.netlify.app');
 const ADMIN_PASSCODE = 'MG_23dec_2026_Admin'; // code de secours utilisé UNIQUEMENT si le backend est injoignable
 
 let usingApi = false;
