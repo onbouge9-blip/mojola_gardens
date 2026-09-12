@@ -5,7 +5,7 @@
    déployé (voir mojola-backend/README.md). Tant que cette valeur n'est pas
    changée, le site reste en mode 100% local (comportement précédent). */
    const MOJOLA_API_BASE = 'https://mojola-gardens-1.onrender.com';
-const MOJOLA_API_ENABLED = !MOJOLA_API_BASE.includes('http://mojola-gardens.netlify.app');
+const MOJOLA_API_ENABLED = !MOJOLA_API_BASE.includes(https://mojola-gardens-1.onrender.com');
 
 async function mojolaApiPost(endpoint, payload) {
   if (!MOJOLA_API_ENABLED) return { ok: false, offline: true };
