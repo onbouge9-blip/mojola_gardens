@@ -21,7 +21,8 @@ async function mojolaApiPost(endpoint, payload) {
     return { ok: false, offline: true }; // pas de réseau / backend injoignable
   }
 }
-window.mojolaApiPost = mojolaApiPost;
+window.mojolaApiPost = mojolaApiPost;google-site-verification=IGNhQlxBWj1BSAz3I8EUPRvMzGD1ZCSXH-t9r7n3sfg
+
 
 async function mojolaApiGet(endpoint, headers) {
   if (!MOJOLA_API_ENABLED) return { ok: false, offline: true };
