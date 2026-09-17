@@ -1,6 +1,0 @@
-node_modules/
-.env
-mojola.db
-mojola.db-journal
-mojola.db-wal
-mojola.db-shm
