@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Réserver une table — Mojola Gardens Godomey</title>
+<meta name="description" content="Réservez votre table chez Mojola Gardens à Godomey : choisissez la date, l'heure et le nombre de convives.">
+<link rel="icon" href="images/logo.jpg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-row">
+    <a href="index.html" class="brand">
+      <img src="images/logo.jpg" alt="Logo Mojola Gardens">
+      <span class="brand-text"><strong>Mojola Gardens</strong><span>Une histoire de goût</span></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="menu.html">Menu</a>
+      <a href="commande.html">Commander</a>
+      <a href="reservation.html" class="active">Réserver</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+22901530786"><span><svg class="icon-inline" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 8 H18 L21 16 L17 19 C19 25 23 29 29 31 L32 27 L40 30 V36 C40 38.2 38.2 40 36 40 C22 40 8 26 8 12 C8 9.8 9.8 8 12 8 Z" fill="none" stroke="#2F5D3F" stroke-width="2.2" stroke-linejoin="round"/></svg></span> +229 01 53 07 86 74</a>
+      <a href="reservation.html" class="btn btn-primary">Réserver une table</a>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Accueil</a> / Réserver</div>
+    <h1>Réservez votre table</h1>
+    <p>Que ce soit pour un déjeuner en tête-à-tête, un anniversaire ou une soirée entre amis à l'Art's Corner, dites-nous-en un peu plus et notre équipe confirmera votre réservation.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="display:grid;grid-template-columns:1.6fr 1fr;gap:36px;align-items:start;">
+
+    <form class="form-card reveal" data-mojola-form="reservation">
+      <h2 class="mt-0" style="font-size:1.4rem;">Formulaire de réservation</h2>
+      <div class="form-grid">
+        <div class="field">
+          <label for="nom">Nom complet</label>
+          <input type="text" id="nom" name="nom" placeholder="Votre nom et prénom" required>
+        </div>
+        <div class="field">
+          <label for="tel">Téléphone / WhatsApp</label>
+          <div class="tel-group">
+            <select id="telCode" name="telCode" aria-label="Indicatif pays">
+              <option value="+229" selected>🇧🇯 Bénin +229</option>
+              <option value="+228">🇹🇬 Togo +228</option>
+              <option value="+234">🇳🇬 Nigéria +234</option>
+              <option value="+233">🇬🇭 Ghana +233</option>
+              <option value="+225">🇨🇮 Côte d'Ivoire +225</option>
+              <option value="+227">🇳🇪 Niger +227</option>
+              <option value="+226">🇧🇫 Burkina Faso +226</option>
+              <option value="+223">🇲🇱 Mali +223</option>
+              <option value="+221">🇸🇳 Sénégal +221</option>
+              <option value="+237">🇨🇲 Cameroun +237</option>
+              <option value="+241">🇬🇦 Gabon +241</option>
+              <option value="+242">🇨🇬 Congo +242</option>
+              <option value="+243">🇨🇩 RD Congo +243</option>
+              <option value="+33">🇫🇷 France +33</option>
+              <option value="+32">🇧🇪 Belgique +32</option>
+              <option value="+41">🇨🇭 Suisse +41</option>
+              <option value="+49">🇩🇪 Allemagne +49</option>
+              <option value="+44">🇬🇧 Royaume-Uni +44</option>
+              <option value="+1">🇺🇸 / 🇨🇦 USA/Canada +1</option>
+              <option value="+other">🌍 Autre indicatif</option>
+            </select>
+            <input type="tel" id="tel" name="tel" placeholder="00 00 00 00" required inputmode="tel" autocomplete="tel-national">
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Adresse e-mail</label>
+          <input type="email" id="email" name="email" placeholder="vous@exemple.com">
+        </div>
+        <div class="field">
+          <label for="personnes">Nombre de convives</label>
+          <select id="personnes" name="personnes" required>
+            <option value="">Choisir…</option>
+            <option>1 personne</option>
+            <option>2 personnes</option>
+            <option>3-4 personnes</option>
+            <option>5-8 personnes</option>
+            <option>Plus de 8 personnes (groupe/événement)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="date">Date souhaitée</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="field">
+          <label for="heure">Heure souhaitée</label>
+          <input type="time" id="heure" name="heure" required>
+        </div>
+        <div class="field">
+          <label for="occasion">Occasion</label>
+          <select id="occasion" name="occasion">
+            <option value="">Sans occasion particulière</option>
+            <option>Anniversaire</option>
+            <option>Rendez-vous d'affaires</option>
+            <option>Retrouvailles / amis</option>
+            <option>Soirée cocktails Art's Corner</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="zone">Espace préféré</label>
+          <select id="zone" name="zone">
+            <option value="">Peu importe</option>
+            <option>Salle intérieure</option>
+            <option>Terrasse jardin</option>
+            <option>Bar Art's Corner</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="message">Message / demandes particulières</label>
+          <textarea id="message" name="message" placeholder="Allergies, table près du jardin, gâteau d'anniversaire..."></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block" style="margin-top:22px;">Envoyer ma demande de réservation</button>
+      <p class="form-note">En envoyant ce formulaire, vous acceptez d'être contacté par téléphone ou WhatsApp pour la confirmation de votre table. Pour une réservation immédiate, appelez-nous directement.</p>
+      <div class="form-feedback" role="status" style="display:none;margin-top:16px;background:var(--cream-2);border:1px solid var(--leaf);color:var(--forest-dark);padding:14px 16px;border-radius:12px;font-weight:600;"></div>
+    </form>
+
+    <aside style="display:grid;gap:20px;">
+      <div class="sidebar-card reveal">
+        <h3>Réserver plus vite</h3>
+        <p style="color:rgba(255,255,255,.85);font-size:.92rem;">Pour les groupes de plus de 8 personnes ou les événements, contactez-nous directement.</p>
+        <a href="tel:+22901530786" class="btn btn-gold btn-block" style="margin-bottom:10px;"><svg class="icon-inline" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 8 H18 L21 16 L17 19 C19 25 23 29 29 31 L32 27 L40 30 V36 C40 38.2 38.2 40 36 40 C22 40 8 26 8 12 C8 9.8 9.8 8 12 8 Z" fill="none" stroke="#2F5D3F" stroke-width="2.2" stroke-linejoin="round"/></svg> Appeler le restaurant</a>
+        <a href="https://wa.me/22953078674" target="_blank" rel="noopener" class="btn btn-outline-light btn-block"><img class="cat-emoji-icon-whatsapp" src="images/icons/whatsapp.png" alt="WhatsApp"> Écrire sur WhatsApp</a>
+
+        <div style="margin-top:24px;">
+          <div class="hours-row"><span>Lundi — Dimanche</span><span>10h00 — 23h30</span></div>
+          <div class="hours-row"><span>Bar Art's Corner</span><span>Jusqu'à tard le soir</span></div>
+        </div>
+      </div>
+
+      <div class="loc-card reveal">
+        <h3 style="margin-top:0;">Bon à savoir</h3>
+        <div class="loc-item"><div class="loc-ico"><img class="loc-ico" src="images/icons/lock.png" alt=""></div><div><strong>Délai de confirmation</strong><p style="margin:4px 0 0;color:var(--ink-soft);font-size:.88rem;">Notre équipe vous confirme sous peu par téléphone.</p></div></div>
+        <div class="loc-item"><div class="loc-ico"><img class="ico-plateau" src="images/icons/groupe.png" alt=""></div><div><strong>Groupes & événements</strong><p style="margin:4px 0 0;color:var(--ink-soft);font-size:.88rem;">Plateaux à partager disponibles dès 8 000 FCFA.</p></div></div>
+        <div class="loc-item"><div class="loc-ico"><img src="images/icons/livreur.png" alt=""></div><div><strong>Pas envie de sortir ?</strong><p style="margin:4px 0 0;color:var(--ink-soft);font-size:.88rem;">Livraison à Godomey dès 500 FCFA — voir la page <a href="contact.html" style="color:var(--tomato);font-weight:700;">Contact</a>.</p></div></div>
+        <div class="loc-item"><div class="loc-ico"><img src="images/icons/panier.png" alt=""></div><div><strong>Envie de choisir vos plats ?</strong><p style="margin:4px 0 0;color:var(--ink-soft);font-size:.88rem;"><a href="commande.html" style="color:var(--tomato);font-weight:700;">Composez votre commande</a> et envoyez-la directement sur WhatsApp.</p></div></div>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="images/logo.jpg" alt="Logo Mojola Gardens"><strong>Mojola Gardens</strong></div>
+        <p style="font-size:.9rem;">Restaurant Bar Art's Corner à Godomey — cuisine saine & sans cube, une histoire de goût.</p>
+        <div class="social-row">
+          <a href="https://instagram.com/mojolagardens" aria-label="Instagram" target="_blank" rel="noopener"><svg class="icon-inline" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="15" width="36" height="23" rx="4" fill="none" stroke="#2F5D3F" stroke-width="2.3"/>
+      <path d="M16 15 L19 9.5 H29 L32 15" fill="none" stroke="#2F5D3F" stroke-width="2.3" stroke-linejoin="round"/>
+      <circle cx="24" cy="26.5" r="7" fill="none" stroke="#D9A441" stroke-width="2.1"/>
+      <circle cx="35" cy="20" r="1.6" fill="#E2703A"/></svg></a>
+          <a href="https://facebook.com/mojolagardens" aria-label="Facebook" target="_blank" rel="noopener"><img src="images/icons/facebook.png" alt="Facebook"></a>
+          <a href="https://wa.me/22953078674" aria-label="WhatsApp" target="_blank" rel="noopener"><img src="images/icons/whatsapp.png" alt="WhatsApp"></a>
+        </div>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <a href="index.html">Accueil</a>
+        <a href="apropos.html">À propos</a>
+        <a href="menu.html">Menu</a>
+        <a href="commande.html">Commander</a>
+        <a href="reservation.html">Réserver</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h5>Nos univers</h5>
+        <a href="menu.html#salades">Salades & Bowls</a>
+        <a href="menu.html#pizzas">Pizzas</a>
+        <a href="menu.html#grillades">Grillades & Choukouya</a>
+        <a href="menu.html#plateaux-partage">Plateaux à partager</a>
+        <a href="menu.html#cocktails">Bar & Cocktails</a>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <a href="tel:+22901530786">+229 01 53 07 86 74</a>
+        <a href="tel:+22953078674">+229 53 07 86 74</a>
+        <a href="https://maps.app.goo.gl/xRem4L5AE8pWV8Yw7" target="_blank" rel="noopener">Godomey, Abomey-Calavi, Bénin</a>
+        <a href="#">Livraison dès 500 FCFA</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Mojola Gardens. Tous droits réservés.</span>
+      <span>Mojola Gardens · Godomey, Bénin</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/22953078674" class="wa-float" aria-label="Contacter sur WhatsApp" target="_blank" rel="noopener"><img src="images/icons/whatsapp.png" alt="WhatsApp"></a>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
