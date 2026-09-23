@@ -1,17 +1,16 @@
 // MOJOLA GARDENS — tableau de bord (admin.js)
-// Utilise l'API backend (voir mojola-backend/) quand MOJOLA_API_BASE est configuré
-// et joignable. Sinon, repli automatique sur les données locales (localStorage)
+// Utilise Supabase (voir js/supabase-client.js) quand configuré et joignable.
+// Sinon, repli automatique sur les données locales (localStorage)
 // enregistrées par script.js — visibles uniquement sur cet appareil.
 
-const ADMIN_PASSCODE = 'MG_23dec_2026_Admin'; // code de secours utilisé UNIQUEMENT si le backend est injoignable
+const ADMIN_PASSCODE = 'MG_23dec_2026_Admin'; // code de secours utilisé UNIQUEMENT si Supabase n'est pas configuré/joignable
 
 let usingApi = false;
-let adminKey = '';
 let lastReservations = [];
 let lastOrders = [];
 let lastMessages = [];
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
 
   const gate = document.getElementById('adminGate');
   const dashboard = document.getElementById('adminDashboard');
@@ -26,18 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
     renderAll();
   }
 
-  async function checkApiHealth() {
-    if (!MOJOLA_API_ENABLED) return false;
-    try {
-      const res = await fetch(`${MOJOLA_API_BASE}/health`);
-      return res.ok;
-    } catch (e) { return false; }
-  }
-
-  // session déjà ouverte (même onglet) : on restaure l'état sans redemander le code
-  if (sessionStorage.getItem('mojola_admin_authed') === '1') {
-    adminKey = sessionStorage.getItem('mojola_admin_key') || '';
-    usingApi = !!adminKey && MOJOLA_API_ENABLED;
+  // session Supabase déjà ouverte (persistée par supabase-js) : on restaure sans redemander le code
+  if (window.SUPABASE_ENABLED !== false && window.mojolaSb) {
+    const { data } = await window.mojolaSb.auth.getSession();
+    if (data?.session) {
+      usingApi = true;
+      showDashboard();
+    } else if (sessionStorage.getItem('mojola_admin_authed') === '1') {
+      usingApi = false; // repli local déjà validé dans cet onglet
+      showDashboard();
+    }
+  } else if (sessionStorage.getItem('mojola_admin_authed') === '1') {
+    usingApi = false;
     showDashboard();
   }
 
@@ -46,30 +45,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const value = document.getElementById('gatePass').value;
     gateError.style.display = 'none';
 
-    if (MOJOLA_API_ENABLED && await checkApiHealth()) {
-      try {
-        const res = await fetch(`${MOJOLA_API_BASE}/reservations`, { headers: { 'x-admin-key': value } });
-        if (res.ok) {
-          usingApi = true;
-          adminKey = value;
-          sessionStorage.setItem('mojola_admin_authed', '1');
-          sessionStorage.setItem('mojola_admin_key', value);
-          return showDashboard();
-        }
-        if (res.status === 401) {
-          gateError.textContent = 'Code incorrect.';
-          gateError.style.display = 'block';
-          return;
-        }
-      } catch (e) { /* backend injoignable malgré le health check — on retente en local */ }
+    if (window.MOJOLA_API_ENABLED && window.mojolaSb) {
+      const { data, error } = await window.mojolaSb.auth.signInWithPassword({
+        email: window.SUPABASE_ADMIN_EMAIL,
+        password: value
+      });
+      if (!error && data?.session) {
+        usingApi = true;
+        return showDashboard();
+      }
+      // Supabase joignable mais identifiants refusés : on retente quand même le code
+      // de secours ci-dessous (utile pendant la mise en place, avant d'avoir créé
+      // l'utilisateur admin dans Supabase).
     }
 
-    // repli : code local (utile avant déploiement du backend, ou hors-ligne)
+    // repli : code local (utile avant configuration de Supabase, ou hors-ligne)
     if (value === ADMIN_PASSCODE) {
       usingApi = false;
-      adminKey = '';
       sessionStorage.setItem('mojola_admin_authed', '1');
-      sessionStorage.removeItem('mojola_admin_key');
       showDashboard();
     } else {
       gateError.textContent = 'Code incorrect.';
@@ -77,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  logoutBtn?.addEventListener('click', () => {
+  logoutBtn?.addEventListener('click', async () => {
     sessionStorage.removeItem('mojola_admin_authed');
-    sessionStorage.removeItem('mojola_admin_key');
+    if (window.mojolaSb) { try { await window.mojolaSb.auth.signOut(); } catch (e) { /* ignore */ } }
     location.reload();
   });
 
@@ -126,11 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   async function fetchKind(kind) {
-    if (usingApi) {
-      try {
-        const res = await fetch(`${MOJOLA_API_BASE}/${kind}`, { headers: { 'x-admin-key': adminKey } });
-        if (res.ok) return { source: 'api', data: await res.json() };
-      } catch (e) { /* bascule vers le local ci-dessous */ }
+    if (usingApi && window.mojolaSb) {
+      const { data, error } = await window.mojolaSb.from(kind).select('*').order('created_at', { ascending: false });
+      if (!error) return { source: 'api', data };
+      // bascule vers le local ci-dessous
     }
     return { source: 'local', data: MojolaStore.read(MojolaStore.KEYS[kind]) };
   }
@@ -152,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (source === 'api') {
       el.innerHTML = '🟢 <strong>Connecté à la base de données en ligne</strong> — visible depuis n\u2019importe quel appareil.';
     } else {
-      el.innerHTML = '🟡 <strong>Mode local</strong> — backend non connecté ou injoignable. Ces données restent sur cet appareil uniquement. Configurez <code>MOJOLA_API_BASE</code> dans <code>js/script.js</code> et <code>js/admin.js</code> une fois votre backend déployé (voir <code>mojola-backend/README.md</code>).';
+      el.innerHTML = '🟡 <strong>Mode local</strong> — Supabase non connecté/injoignable, ou identifiants non reconnus. Ces données restent sur cet appareil uniquement. Configurez <code>SUPABASE_URL</code> / <code>SUPABASE_ANON_KEY</code> dans <code>js/supabase-client.js</code> (voir <code>mojola-backend-supabase/README.md</code>).';
     }
   }
 
@@ -286,8 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target.type !== 'checkbox') return;
     const name = e.target.dataset.name;
     const available = e.target.checked;
-    const headers = usingApi ? { 'x-admin-key': adminKey } : null;
-    await MojolaStock.setAvailability(name, available, headers);
+    await MojolaStock.setAvailability(name, available);
   });
 
   /* ---------- status changes (event delegation) ---------- */
@@ -297,16 +288,8 @@ document.addEventListener('DOMContentLoaded', () => {
     e.target.className = `status-select st-${value}`;
 
     if (usingApi) {
-      try {
-        const res = await fetch(`${MOJOLA_API_BASE}/${kind}/${id}`, {
-          method: 'PATCH',
-          headers: { 'Content-Type': 'application/json', 'x-admin-key': adminKey },
-          body: JSON.stringify({ status: value })
-        });
-        if (!res.ok) alert('Le serveur a refusé la mise à jour du statut. Réessayez.');
-      } catch (e2) {
-        alert('Backend injoignable : le statut n\u2019a pas pu être mis à jour.');
-      }
+      const result = await mojolaApiPatch(kind, id, { status: value });
+      if (!result.ok) alert('Supabase a refusé la mise à jour du statut. Réessayez.');
     } else {
       MojolaStore.update(MojolaStore.KEYS[kind], id, { status: value });
     }

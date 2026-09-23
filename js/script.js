@@ -1,56 +1,6 @@
 // MOJOLA GARDENS — script commun
-
-/* ---------- backend API config ----------
-   Remplacez REPLACE_WITH_YOUR_BACKEND_URL par l'URL de votre backend une fois
-   déployé (voir mojola-backend/README.md). Tant que cette valeur n'est pas
-   changée, le site reste en mode 100% local (comportement précédent). */
-const MOJOLA_API_BASE = 'https://mojola-gardens-1.onrender.com/api';
-const MOJOLA_API_ENABLED = !MOJOLA_API_BASE.includes('REPLACE_WITH_YOUR_BACKEND_URL');
-
-async function mojolaApiPost(endpoint, payload) {
-  if (!MOJOLA_API_ENABLED) return { ok: false, offline: true };
-  try {
-    const res = await fetch(`${MOJOLA_API_BASE}/${endpoint}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    if (!res.ok) return { ok: false, offline: false };
-    return { ok: true, data: await res.json() };
-  } catch (e) {
-    return { ok: false, offline: true }; // pas de réseau / backend injoignable
-  }
-}
-
-
-
-async function mojolaApiGet(endpoint, headers) {
-  if (!MOJOLA_API_ENABLED) return { ok: false, offline: true };
-  try {
-    const res = await fetch(`${MOJOLA_API_BASE}/${endpoint}`, { headers: headers || {} });
-    if (!res.ok) return { ok: false, offline: false };
-    return { ok: true, data: await res.json() };
-  } catch (e) {
-    return { ok: false, offline: true };
-  }
-}
-window.mojolaApiGet = mojolaApiGet;
-
-async function mojolaApiPut(endpoint, payload, headers) {
-  if (!MOJOLA_API_ENABLED) return { ok: false, offline: true };
-  try {
-    const res = await fetch(`${MOJOLA_API_BASE}/${endpoint}`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json', ...(headers || {}) },
-      body: JSON.stringify(payload)
-    });
-    if (!res.ok) return { ok: false, offline: false };
-    return { ok: true, data: await res.json() };
-  } catch (e) {
-    return { ok: false, offline: true };
-  }
-}
-window.mojolaApiPut = mojolaApiPut;
+// (la connexion au backend se fait désormais via js/supabase-client.js,
+//  chargé avant ce fichier — voir mojola-backend-supabase/README.md)
 
 /* ---------- shared local data store (fallback + feeds the admin dashboard
    when the backend is unreachable) ----------
@@ -110,9 +60,10 @@ const MojolaStock = {
     const set = new Set(Object.keys(map).filter(name => map[name] === false));
     return { source: 'local', set };
   },
-  // adminHeaders: pass { 'x-admin-key': ... } when calling from admin.html in API mode
-  async setAvailability(name, available, adminHeaders) {
-    const apiResult = await mojolaApiPut(`stock/${encodeURIComponent(name)}`, { available }, adminHeaders);
+  // Appelée depuis admin.html — nécessite une session Supabase authentifiée
+  // (RLS) pour que l'écriture soit acceptée ; sinon repli local silencieux.
+  async setAvailability(name, available) {
+    const apiResult = await mojolaApiPut(`stock/${encodeURIComponent(name)}`, { available });
     if (!apiResult.ok) {
       const map = this.readLocal();
       map[name] = available;
@@ -201,9 +152,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const fmt = (n) => n.toLocaleString('fr-FR') + ' FCFA';
 
     function readCustomer() {
+      const code = document.getElementById('o-telCode')?.value || '';
+      const localTel = document.getElementById('o-tel')?.value.trim() || '';
       return {
         nom: document.getElementById('o-nom')?.value.trim() || '',
-        tel: document.getElementById('o-tel')?.value.trim() || '',
+        tel: localTel ? `${code} ${localTel}`.trim() : '',
         mode: document.getElementById('o-mode')?.value || '',
         date: document.getElementById('o-date')?.value || '',
         heure: document.getElementById('o-heure')?.value || '',
@@ -323,20 +276,36 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (type === 'reservation') {
+        const code = fields.telCode && fields.telCode !== '+other' ? fields.telCode : '';
+        const fullTel = `${code} ${fields.tel || ''}`.trim();
         const payload = {
-          nom: fields.nom, tel: fields.tel, email: fields.email, personnes: fields.personnes,
+          nom: fields.nom, tel: fullTel, email: fields.email, personnes: fields.personnes,
           date: fields.date, heure: fields.heure, occasion: fields.occasion, zone: fields.zone, message: fields.message
         };
         const apiResult = await mojolaApiPost('reservations', payload);
-        if (!apiResult.ok) MojolaStore.add(MojolaStore.KEYS.reservations, { type, fields });
+        if (!apiResult.ok) MojolaStore.add(MojolaStore.KEYS.reservations, { type, fields: { ...fields, tel: fullTel } });
+
+        let msg = 'Bonjour Mojola Gardens, je souhaite réserver une table :\n\n';
+        msg += `Nom : ${payload.nom}\n`;
+        msg += `Téléphone : ${payload.tel}\n`;
+        if (payload.email) msg += `E-mail : ${payload.email}\n`;
+        if (payload.personnes) msg += `Convives : ${payload.personnes}\n`;
+        if (payload.date) msg += `Date : ${payload.date}\n`;
+        if (payload.heure) msg += `Heure : ${payload.heure}\n`;
+        if (payload.occasion) msg += `Occasion : ${payload.occasion}\n`;
+        if (payload.zone) msg += `Espace préféré : ${payload.zone}\n`;
+        if (payload.message) msg += `Message : ${payload.message}\n`;
+        window.open(`https://wa.me/22953078674?text=${encodeURIComponent(msg)}`, '_blank');
       } else {
-        const payload = { nom: fields['c-nom'], tel: fields['c-tel'], sujet: fields['c-sujet'], message: fields['c-message'] };
+        const cCode = fields['c-telCode'] || '';
+        const cTel = fields['c-tel'] || '';
+        const payload = { nom: fields['c-nom'], tel: cTel ? `${cCode} ${cTel}`.trim() : '', sujet: fields['c-sujet'], message: fields['c-message'] };
         const apiResult = await mojolaApiPost('messages', payload);
-        if (!apiResult.ok) MojolaStore.add(MojolaStore.KEYS.messages, { type, fields });
+        if (!apiResult.ok) MojolaStore.add(MojolaStore.KEYS.messages, { type, fields: { ...fields, 'c-tel': payload.tel } });
       }
 
       const label = type === 'reservation'
-        ? 'Merci ! Votre demande de réservation a bien été enregistrée. Notre équipe vous confirmera par téléphone ou WhatsApp très vite.'
+        ? 'Merci ! Votre demande de réservation a bien été enregistrée. Un onglet WhatsApp vient de s\u2019ouvrir : envoyez le message pré-rempli pour que notre équipe confirme votre table au plus vite.'
         : 'Merci ! Votre message a bien été envoyé. Nous vous répondrons rapidement.';
       if (box) {
         box.textContent = label;
