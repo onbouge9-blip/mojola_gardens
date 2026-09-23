@@ -10,11 +10,11 @@
 // 100% local (comportement inchangé).
 // ------------------------------------------------------------------
 
-const SUPABASE_URL = 'REPLACE_WITH_YOUR_SUPABASE_URL';
-const SUPABASE_ANON_KEY = 'REPLACE_WITH_YOUR_SUPABASE_ANON_KEY';
-const SUPABASE_ADMIN_EMAIL = 'admin@mojolagardens.com';
+const SUPABASE_URL = 'https://namydrrkdtkjjqmdcewy.supabase.co/rest/v1/';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hbXlkcnJrZHRrampxbWRjZXd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk2NDA2MzIsImV4cCI6MjEwNTIxNjYzMn0.nUgsrcALDtJDuSQf2zI5U_rZI60Y3EhWJkbEmM97mIg';
+const SUPABASE_ADMIN_EMAIL = 'onbouge9@gmail.com';
 
-const SUPABASE_ENABLED = !SUPABASE_URL.includes('REPLACE_WITH_YOUR_SUPABASE_URL');
+const SUPABASE_ENABLED = !SUPABASE_URL.includes('https://namydrrkdtkjjqmdcewy.supabase.co/rest/v1/');
 
 const sb = SUPABASE_ENABLED ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
 window.mojolaSb = sb;
