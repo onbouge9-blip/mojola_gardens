@@ -53,29 +53,8 @@
         </div>
         <div class="field">
           <label for="tel">Téléphone / WhatsApp</label>
-          <div class="tel-group">
-            <select id="telCode" name="telCode" aria-label="Indicatif pays">
-              <option value="+229" selected>🇧🇯 Bénin +229</option>
-              <option value="+228">🇹🇬 Togo +228</option>
-              <option value="+234">🇳🇬 Nigéria +234</option>
-              <option value="+233">🇬🇭 Ghana +233</option>
-              <option value="+225">🇨🇮 Côte d'Ivoire +225</option>
-              <option value="+227">🇳🇪 Niger +227</option>
-              <option value="+226">🇧🇫 Burkina Faso +226</option>
-              <option value="+223">🇲🇱 Mali +223</option>
-              <option value="+221">🇸🇳 Sénégal +221</option>
-              <option value="+237">🇨🇲 Cameroun +237</option>
-              <option value="+241">🇬🇦 Gabon +241</option>
-              <option value="+242">🇨🇬 Congo +242</option>
-              <option value="+243">🇨🇩 RD Congo +243</option>
-              <option value="+33">🇫🇷 France +33</option>
-              <option value="+32">🇧🇪 Belgique +32</option>
-              <option value="+41">🇨🇭 Suisse +41</option>
-              <option value="+49">🇩🇪 Allemagne +49</option>
-              <option value="+44">🇬🇧 Royaume-Uni +44</option>
-              <option value="+1">🇺🇸 / 🇨🇦 USA/Canada +1</option>
-              <option value="+other">🌍 Autre indicatif</option>
-            </select>
+          <div class="tel-group" data-phone-field data-code-id="telCode">
+            <input type="hidden" id="telCode" name="telCode" value="+229">
             <input type="tel" id="tel" name="tel" placeholder="00 00 00 00" required inputmode="tel" autocomplete="tel-national">
           </div>
         </div>
@@ -209,6 +188,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="js/supabase-client.js"></script>
+<script src="js/phone-code.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
