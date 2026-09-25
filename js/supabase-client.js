@@ -10,7 +10,7 @@
 // 100% local (comportement inchangé).
 // ------------------------------------------------------------------
 
-const SUPABASE_URL = 'https://namydrrkdtkjjqmdcewy.supabase.co/rest/v1/';
+const SUPABASE_URL = 'https://namydrrkdtkjjqmdcewy.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hbXlkcnJrZHRrampxbWRjZXd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk2NDA2MzIsImV4cCI6MjEwNTIxNjYzMn0.nUgsrcALDtJDuSQf2zI5U_rZI60Y3EhWJkbEmM97mIg';
 const SUPABASE_ADMIN_EMAIL = 'onbouge9@gmail.com';
 
